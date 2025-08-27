@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Core/" />
+  <Folder Name="/Core/Domain/">
+    <Project Path="src/AcompanhamentoBasquete.Domain/AcompanhamentoBasquete.Domain.csproj" Id="13b247f8-d867-47ec-87be-88010362400d" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
+</Solution>
