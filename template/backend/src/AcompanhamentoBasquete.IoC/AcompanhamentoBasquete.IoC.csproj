@@ -11,6 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AcompanhamentoBasquete.Application\AcompanhamentoBasquete.Application.csproj" />
+    <ProjectReference Include="..\AcompanhamentoBasquete.Common\AcompanhamentoBasquete.Common.csproj" />
     <ProjectReference Include="..\AcompanhamentoBasquete.Infra.Data.SQL\AcompanhamentoBasquete.Infra.Data.SQL.csproj" />
   </ItemGroup>
 

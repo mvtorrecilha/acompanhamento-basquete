@@ -9,13 +9,16 @@
   <Folder Name="/1-Core/Domain/">
     <Project Path="src/AcompanhamentoBasquete.Domain/AcompanhamentoBasquete.Domain.csproj" Id="13b247f8-d867-47ec-87be-88010362400d" />
   </Folder>
-  <Folder Name="/3-Infra/" />
-  <Folder Name="/3-Infra/Data/">
-    <Project Path="src/AcompanhamentoBasquete.Infra.Data.SQL/AcompanhamentoBasquete.Infra.Data.SQL.csproj" Id="59a331d8-cdd9-42c8-adce-f6f9ccf37269" />
-  </Folder>
-  <Folder Name="/4-Crosscutting/">
+  <Folder Name="/2-Infra/" />
+  <Folder Name="/2-Infra/Crosscutting/">
     <Project Path="src/AcompanhamentoBasquete.Common/AcompanhamentoBasquete.Common.csproj" Id="daf7c293-ed17-4065-af02-4c8e1ef58ffa" />
     <Project Path="src/AcompanhamentoBasquete.IoC/AcompanhamentoBasquete.IoC.csproj" Id="e9cca3fe-cb5b-4a36-9425-c6cb64479640" />
+  </Folder>
+  <Folder Name="/2-Infra/Data/">
+    <Project Path="src/AcompanhamentoBasquete.Infra.Data.SQL/AcompanhamentoBasquete.Infra.Data.SQL.csproj" Id="59a331d8-cdd9-42c8-adce-f6f9ccf37269" />
+  </Folder>
+  <Folder Name="/3-Tests/">
+    <Project Path="tests/AcompanhamentoBasquete.Unit/AcompanhamentoBasquete.Unit.csproj" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path="Directory.Packages.props" />

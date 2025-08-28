@@ -1,4 +1,4 @@
-using AcompanhamentoBasquete.Application;
+using AcompanhamentoBasquete.API.Middleware;
 using AcompanhamentoBasquete.Infra.Data.SQL;
 using AcompanhamentoBasquete.IoC;
 using Microsoft.EntityFrameworkCore;
@@ -17,14 +17,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.RegisterDependencies();
 
-builder.Services.AddMediatR(cfg =>
-{
-    cfg.RegisterServicesFromAssemblies(
-        typeof(ApplicationLayer).Assembly,
-        typeof(Program).Assembly
-    );
-});
-
 builder.Services.AddCors(o => o.AddPolicy("AllowAngular", builder =>
 {
     builder.AllowAnyOrigin()
@@ -33,6 +25,8 @@ builder.Services.AddCors(o => o.AddPolicy("AllowAngular", builder =>
 }));
 
 var app = builder.Build();
+
+app.UseMiddleware<ValidationExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
