@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AcompanhamentoBasquete.Application\AcompanhamentoBasquete.Application.csproj" />
+    <ProjectReference Include="..\AcompanhamentoBasquete.Common\AcompanhamentoBasquete.Common.csproj" />
+    <ProjectReference Include="..\AcompanhamentoBasquete.Infra.Data.SQL\AcompanhamentoBasquete.Infra.Data.SQL.csproj" />
+    <ProjectReference Include="..\AcompanhamentoBasquete.IoC\AcompanhamentoBasquete.IoC.csproj" />
+  </ItemGroup>
+
+</Project>
