@@ -85,12 +85,3 @@ ng serve
 
 Por padrão, o Angular rodará em:
 http://localhost:4200
-
-
-# Imagens da aplicação
-
-### Lançar pontos
-![Lançar Pontos](docs/screenshots/lançar_pontos.png)
-
-### Resultados
-![Resultados](docs/screenshots/resultados_pontos.png)
