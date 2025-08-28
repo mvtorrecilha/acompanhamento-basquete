@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="card">
+    <h2>Lançar Pontos</h2>
+    <form [formGroup]="jogoForm" (ngSubmit)="salvar()">
+      <label>Data do jogo:</label>
+      <input type="date" formControlName="data" [max]="dataAtualISO" />
+      <div class="error" *ngIf="jogoForm.get('data')?.invalid && jogoForm.get('data')?.touched">
+        Data do jogo é obrigatória.
+      </div>
+
+      <label>Quantos pontos você fez:</label>
+      <input type="number" formControlName="pontos" min="0" />
+      <div class="error" *ngIf="jogoForm.get('pontos')?.invalid && jogoForm.get('pontos')?.touched">
+        Pontos são obrigatórios.
+      </div>
+
+      <div class="botao-container">
+        <button type="submit" [disabled]="jogoForm.invalid">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
