@@ -20,9 +20,9 @@ public class JogosController : Controller
     }
 
     [HttpGet("resultados")]
+    [ProducesResponseType(typeof(ApiResponseWithData<ObterResultadosPontosResult>), StatusCodes.Status200OK)]
     public async Task<IActionResult> ObterResultadosAsync(CancellationToken cancellationToken)
     {
-        Convert.ToInt32("sds");
         _logger.LogInformation("O controller {JogosController} foi acionado para obter resultados dos pontos lançados.",
           nameof(JogosController));
 
@@ -37,6 +37,8 @@ public class JogosController : Controller
     }
 
     [HttpPost]
+    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> AdicionarPontosAsync([FromBody] AdicionarPontosRequest requisicao, CancellationToken cancellationToken)
     {
         _logger.LogInformation("O controller {JogosController} foi acionado para processar {AdicionarPontosRequest}",

@@ -1,0 +1,41 @@
+<div class="container" *ngIf="resultados() as r; else loading">
+  <div class="card">
+    <div class="card-header">
+      <h2>Resultados</h2>
+      <span class="periodo">
+        {{ r.dataPrimeiroJogo | date:'dd/MM/yyyy' }} até {{ r.dataUltimoJogo | date:'dd/MM/yyyy' }}
+      </span>
+    </div>
+
+    <div class="row">
+      <div class="item">
+        <span class="label">Jogos disputados:</span>
+        <span class="value">{{ r.totalJogos }}</span>
+      </div>
+      <div class="item">
+        <span class="label">Total de pontos:</span>
+        <span class="value">{{ r.totalPontos }}</span>
+      </div>
+      <div class="item">
+        <span class="label">Média por jogo:</span>
+        <span class="value">{{ r.mediaPontos | number:'1.1-1' }}</span>
+      </div>
+      <div class="item">
+        <span class="label">Maior pontuação:</span>
+        <span class="value">{{ r.maiorPontuacao }}</span>
+      </div>
+      <div class="item">
+        <span class="label">Menor pontuação:</span>
+        <span class="value">{{ r.menorPontuacao }}</span>
+      </div>
+      <div class="item">
+        <span class="label">Recordes batidos:</span>
+        <span class="value">{{ r.quantidadeRecordes }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading">Carregando resultados...</div>
+</ng-template>
