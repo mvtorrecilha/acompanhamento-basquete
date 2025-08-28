@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-resultado-pontos',
   imports: [CommonModule],
   templateUrl: './resultado-pontos.component.html',
-  styleUrls: ['./resultado-pontos.component.scss']
+  styleUrls: ['./resultado-pontos.component.scss'],
+  providers: [JogoService]
 })
 export class ResultadoPontosComponent implements OnInit {
 
@@ -15,7 +16,6 @@ export class ResultadoPontosComponent implements OnInit {
 
   resultados = toSignal(this._jogoService.obterResultados(), { initialValue: null });
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
