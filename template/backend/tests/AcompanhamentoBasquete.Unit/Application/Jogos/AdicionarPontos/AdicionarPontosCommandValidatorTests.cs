@@ -64,6 +64,6 @@ public class AdicionarPontosCommandValidatorTests
 
         // Then
         result.ShouldHaveValidationErrorFor(c => c.Pontos)
-              .WithErrorMessage("Os pontos devem ser maiores que zero.");
+              .WithErrorMessage("Os pontos devem ser zero ou maiores que zero.");
     }
 }

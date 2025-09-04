@@ -11,6 +11,6 @@ public class AdicionarPontosCommandValidator : AbstractValidator<AdicionarPontos
             .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("A data não pode ser maior que hoje.");
 
         RuleFor(x => x.Pontos)
-            .GreaterThan(0).WithMessage("Os pontos devem ser maiores que zero.");
+            .GreaterThanOrEqualTo(0).WithMessage("Os pontos devem ser zero ou maiores que zero.");
     }
 }
